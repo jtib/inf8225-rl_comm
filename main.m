@@ -42,4 +42,5 @@ V_expand = reshape(V,[length(bufferStates),length(channelStates),length(pmStates
 [newT, newR, stationaryDistr] = calcStationaryDistr(p, T, cost, initStateON); % The stationary distribution depends on starting in the ON or OFF state
 
 % Calculate delay-power operating point
-[holdingCost, overflowCost, delay, power] = calcOperatingPoint(stationaryDistr, reshape(powerCost,[numStates,numActions]), departureDistr, p)
+powCost = reshape(powerCost,[numStates,numActions]);
+[holdingCost, overflowCost, delay, power] = calcOperatingPoint(stationaryDistr, powCost, departureDistr, p)

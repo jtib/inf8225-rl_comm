@@ -1,4 +1,4 @@
-function [holdingCost, overflowCost, delay, power] = calcOperatingPoint(stationaryDistr, powerCost, departureDistr, policy)
+function [holdingCost, overflowCost, delay, power] = calcOperatingPoint(stationaryDistr, powCost, departureDistr, policy)
 % function [holdingCost, overflowCost, delay, power] = calcOperatingPoint(stationaryDistr, powerCost, departureDistr, policy)
 % Calculates delay-power operating point.
 % -------------------------------------------------------------------------
@@ -22,7 +22,7 @@ load parameters;
 % Get power cost in each state for the policy
 policyPowerCost = zeros(1,numStates);
 for s = 1:numStates
-    policyPowerCost(s) = powerCost(s,policy(s));
+    policyPowerCost(s) = powCost(s,policy(s));
 end
 
 % Get holding cost, overflow cost, and delay in each state for the policy
