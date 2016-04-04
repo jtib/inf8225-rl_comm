@@ -43,6 +43,8 @@ deltaT = 1/100;                                                 % time slot dura
 discount_factor = 0.98;                                         % discount factor
 lambda = 0.1;                                                   % Delay-power tradeoff
                                                                 % Setting lambda to 0 will cause numerical errors when computating the optimal policy
+lo = 0.05;                                      % lower bound on lambda for bisection search
+hi = 1.05;                                      % higher bound on lambda for bisection search
 cost_constraint = 4;                                                                
                                                                 
 % Simulation setting
