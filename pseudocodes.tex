@@ -1,0 +1,56 @@
+\documentclass[10pt,onecolumn]{article}
+\usepackage{algorithm,algpseudocode}% http://ctan.org/pkg/{algorithms,algorithmx}
+\algnewcommand{\Inputs}[1]{%
+  \State \textbf{Inputs:}
+  \Statex \hspace*{\algorithmicindent}\parbox[t]{.8\linewidth}{\raggedright #1}
+}
+\algnewcommand{\Initialize}[1]{%
+  \State \textbf{Initialize:}
+  \Statex \hspace*{\algorithmicindent}\parbox[t]{.8\linewidth}{\raggedright #1}
+}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+\begin{algorithm}
+  \caption{The Buffer State Transition Matrix Algorithm}
+  \begin{algorithmic}[1]
+    \Inputs{
+       		$n \in \{0, 1, ...\}$\\
+
+            $l^n:$ \texttt{Data arrival,  i.i.d}\\
+            $\mathrm{states} = 
+			\begin{cases}
+    		b^n \in \{0, \cdots, \mathrm{B}\}: \texttt{Buffer State}\\
+    		h^n: \texttt{Channel State}\\
+    		x^n \in \{\mathrm{on}, \mathrm{off}\}:  \texttt{Power Management State}\\
+			\end{cases}$
+
+            $\mathrm{actions} = 
+			\begin{cases}
+			z^n, 0 \leq z^n \leq b^n: \texttt{Packet Throughput}\\    		
+    		\mathrm{BEP}^n: \texttt{Bit Error Probability}\\
+    		y^n \in \{s_{\mathrm{on}}, s_{\mathrm{off}}\}: \texttt{Power Management Action}\\
+    		f^n, 0 \leq f^n \leq z^n: \texttt{Goodput}\\
+			\end{cases}$
+			}
+    \Initialize{\strut$b^0 \gets b_{init}$}
+    \State $b^n \gets \mathrm{min}(b^n - f^n(\mathrm{BEP}^n, z^n) + l^n, \mathrm{B})$
+	\State $\mathrm{P}^x = \mathrm{P}^x(y) = [\mathrm{P}^x(x^{'} | x,y)]_{x, x^{'}}$
+	\State $\mathrm{P}^h = \mathrm{P}^h(h^{'}|h)$
+	\State $ \mathrm{P}^b = \mathrm{P}^b([b, h, x], \mathrm{BEP}, y, x) = 
+  			\begin{cases}
+    		\sum_{f=0}^{z} \mathrm{P}^l(b^{'} - [b-f]) \mathrm{P}^f(f|\mathrm{BEP}, z), &\text{if } b^{'} \leq \mathrm{B} \\
+    		\sum_{f=0}^{z} \sum_{l=\mathrm{B}-[b-f]}^{\infty} \mathrm{P}^l (l) \mathrm{P}^f(f|\mathrm{BEP}, z), &\text{if } b^{'} = \mathrm{B}
+    		\end{cases}$
+  			
+    \State $s \gets (b, h, x)$ 
+    \State $a \gets (\mathrm{BEP}, y, z)$
+    \State $\mathrm{P}(s^{'}|s, a) = \mathrm{P}^b \times \mathrm{P}^h \times \mathrm{P}^x$
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+\end{document}
