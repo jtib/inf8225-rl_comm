@@ -1,4 +1,4 @@
-function [p, V, Q, lambda, iter, err] = constrainedPolicyIter(T,benefit,cost,cost_constraint,initState,discount_factor,lo,hi)
+function [p, V, Q, lambda, iter, delta, err] = constrainedPolicyIter(T,benefit,cost,cost_constraint,initState,discount_factor,lo,hi)
 % function [p, V, Q, lambda, iter, err] = constrainedValueIter(T,benefit,cost,cost_constraint,initState,discount_factor,lo,hi)
 % -----------------------------------------------------------------
 % Perform constrained value iteration for problem of the form
@@ -32,6 +32,9 @@ function [p, V, Q, lambda, iter, err] = constrainedPolicyIter(T,benefit,cost,cos
 %   iter            -- Number of iterations to meet constraint
 %   err             -- error message (err = -1 if constraint cannot be satisfied)
 % sanity check -- check if constraint is valid
+
+fprintf('Constrained policy iteration\n');
+
 if cost_constraint < min(cost(:)) | cost_constraint > max(cost(:))
     fprintf('min\t\tconstraint\t\tmax\n')
     fprintf('%f\t%f\t%f\n',min(cost(:)),cost_constraint,max(cost(:)));

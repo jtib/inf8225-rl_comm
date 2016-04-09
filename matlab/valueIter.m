@@ -1,4 +1,4 @@
-function [p, V, Q, iter] = valueIter(T,R,discount_factor)
+function [p, V, Q, iter, delta] = valueIter(T,R,discount_factor)
 % function [p, V, Q, iter] = valueIter(T,R,discount_factor)
 % --------------------------------------------------------
 % Inputs:
@@ -15,6 +15,8 @@ function [p, V, Q, iter] = valueIter(T,R,discount_factor)
 %	Q -- The optimal action-value function
 %		Q(current state index, current action index)
 %	iter -- The number of iterations required to converge
+
+fprintf('Value iteration\n');
 
 numStates = size(R,1);
 numActions = size(R,2);

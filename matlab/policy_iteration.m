@@ -1,4 +1,4 @@
-function [p, V, Q, iter] = policy_iteration(T, R, discount_factor, use_val_iter, oldp)
+function [p, V, Q, iter,delta] = policy_iteration(T, R, discount_factor, use_val_iter, oldp)
 % POLICY_ITERATION
 % [new_policy, V, Q, niters] = policy_iteration(T, R, discount_factor, use_val_iter, old_policy)
 %
@@ -7,6 +7,8 @@ function [p, V, Q, iter] = policy_iteration(T, R, discount_factor, use_val_iter,
 %
 % T(s,a,s') = prob(s' | s, a)
 % R(s,a)
+
+fprintf('Policy iteration\n');
 
 S = size(T,1);
 A = size(T,2);
@@ -36,7 +38,7 @@ while ~done
   Q = Q_from_V(V, T, R, discount_factor);
   [V, p] = max(Q, [], 2);
   delta(iter) = max(abs(Q(:) - oldQ(:)));
-  if isequal(p, oldp) | approxeq(Q, oldQ, 1e-4)
+  if isequal(p, oldp) | approxeq(Q, oldQ, 1e-5)
     % if we just compare p and oldp, it might oscillate due to ties
     % However, it may converge faster than Q
     done = 1;
