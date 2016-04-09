@@ -1,2 +1,9 @@
 \beamer@endinputifotherversion {3.36pt}
-\select@language {french}
+\select@language {english}
+\beamer@sectionintoc {1}{The article}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Context}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Problem}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Proposed solution}{8}{0}{1}
+\beamer@sectionintoc {2}{Some theory}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Value iteration}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{Reinforcement learning \& Q-learning}{12}{0}{2}

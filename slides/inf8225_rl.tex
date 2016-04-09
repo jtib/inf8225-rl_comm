@@ -37,7 +37,7 @@
 \usetheme{Madrid}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[francais]{babel}
+\usepackage[english]{babel}
 %\usetheme{Malmoe}
 %\usetheme{Marburg}
 %\usetheme{Montpellier}
@@ -58,9 +58,9 @@
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
-\institute[Polytechnique Montréal] % (optional, but mostly needed)
+\institute[Polytechnique Montreal] % (optional, but mostly needed)
 {
-  Polytechnique Montréal
+  Polytechnique Montreal
   }
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
@@ -87,7 +87,7 @@
 
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{Sommaire}
+  \begin{frame}<beamer>{Contents}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -101,21 +101,54 @@
 
 \begin{frame}{Motivation}
 \begin{itemize}
-\item 
-\item
-\item
-\item
+\item Practical application of Markov Decision Processes (MDPs)
+\item Explore algorithm variants and compare results
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Sommaire}
+\begin{frame}{Contents}
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
 
 % Section and subsections will appear in the presentation overview
 % and table of contents.
-\section{}    
-\subsection{}
+\section{The article} 
+\subsection{Context}
+\begin{frame}{Context}
+\begin{itemize}
+\item several ways to optimize power consumption while transmitting delay-sensitive information
+\begin{itemize}
+\item on the software side...
+\item and on the hardware side
+\end{itemize}
+\item but no strategy to ally both
+\end{itemize}
+\end{frame}
+
+\subsection{Problem}
+\begin{frame}{Problem}
+Find a way to solve the optimization problem
+(balancing the constraints of low power consumption and low transmission time)
+\end{frame}
+
+\subsection{Proposed solution}
+\begin{frame}{Proposed solution}
+\begin{itemize}
+\item Power management problem $\equiv$ MDP
+\item Separate known and unknown components (generalize* the PDS concept)
+\item Use reinforcement learning to solve the DPM problem
+\end{itemize}
+\end{frame}
+
+\section{Some theory}
+\subsection{Value iteration}
+\begin{frame}{Value iteration}
+\end{frame}
+
+\subsection{Reinforcement learning \& Q-learning}
+\begin{frame}{Reinforcement learning \& Q-learning}
+\end{frame}
+
 
 \end{document}
