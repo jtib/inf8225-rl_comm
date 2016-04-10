@@ -32,7 +32,7 @@ while ~done
    for si = 1:numStates % state index
        for ai = 1:numActions % action index
            tmp = T(si,ai,:);
-           tmp = reshape(tmp,1,416);
+           tmp = reshape(tmp,1,numStates);
            next_state_index = sum(rand >= cumsum([0, tmp]));
            BM_prev = R(si,ai) + discount_factor*max(Q_prev(next_state_index,:));
            % Empirical Bellman operator
