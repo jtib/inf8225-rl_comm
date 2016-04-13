@@ -29,19 +29,13 @@ done = false;
 % Main loop
 while ~done
    alpha = 1/k;
+   nsis = next_state_indices(numStates,numActions,T);
    for si = 1:numStates % state index
-       for ai = 1:numActions % action index
-           tmp = T(si,ai,:);
-           tmp = reshape(tmp,1,numStates);
-           next_state_index = sum(rand >= cumsum([0, tmp]));
-           BM_prev = R(si,ai) + discount_factor*max(Q_prev(next_state_index,:));
-           % Empirical Bellman operator
-           BM = R(si,ai) + discount_factor*max(Q(next_state_index,:));
-           % SQL update rule
-           Q_next(si,ai) = Q(si,ai) + alpha*(R(si,ai) - Q(si,ai)) + (1-alpha)*(BM-BM_prev);
-           Q_prev = Q;
-           Q = Q_next;
-       end
+       BM_prev_mat_ai = R(si,:) + discount_factor*max(Q_prev(nsis(si,:),:));
+       BM_mat_ai = R(si,:) + discount_factor*max(Q(nsis(si,:),:));
+       Q_next(si,:) = Q(si,:) + alpha*(R(si,:) - Q(si,:)) + (1-alpha)*(BM_mat_ai - BM_prev_mat_ai);
+       Q_prev = Q;
+       Q = Q_next;
    end
    delta(k) = max(abs(Q(:) - Q_prev(:)));
    fprintf('iter = %d; delta = %d;\n', k, delta(k));

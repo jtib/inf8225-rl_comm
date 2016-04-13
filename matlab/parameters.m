@@ -19,7 +19,8 @@ bitrate = fs.*betaSet;                         % bit rate (bits/second)
 pktRate = bitrate./L;                          % packet rate (packets/second)
 
 % Channel Information
-channelStates_dB = [-18.82, -13.79, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
+%channelStates_dB = [-18.82, -13.79, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
+channelStates_dB = [-18.82, -12,36, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
 channelBoundary = [0, 0.028, 0.058, 0.096, 0.14, 0.198, 0.278, 0.416, Inf];      % channel bin boundaries
 
 % State and action sets

@@ -1,4 +1,4 @@
-function Q = fast_qlearning(T, R, discount_factor, iterations)
+function [p,V,Q,iter,delta] = fast_qlearning(T, R, discount_factor, iterations)
 % Fast Q-learning
 
 fprintf('Fast Q-learning\n');
@@ -10,7 +10,6 @@ numActions = size(T,2);
 % Initialization
 Q0 = (1/(1-discount_factor))*R;
 Q = Q0;
-%delta = zeros(1,iterations);
 k = 2;
 done = false;
 change_track = 0;
@@ -20,9 +19,11 @@ change = zeros(numStates,numActions);
 lprime = zeros(numStates,numActions);
 V = max(Q,[],2);
 lambda = 0.1;
+delta = zeros(1,iterations);
 
 % Main loop
 while ~done
+    Q_prev = Q;
     alpha = 1/k;
     for si = 1:numStates % state index
         for ai = 1:numActions % action index
@@ -46,7 +47,13 @@ while ~done
             V = V_next;
         end
     end
-    done = (k > iterations) 
-    k = k+1
+    delta(k) = max(abs(Q(:) - Q_prev(:)));
+    fprintf('iter = %d; delta = %d;\n', k, delta(k));
+    done = (k > iterations | approxeq(Q, Q_prev, 1e-5));
+    k = k+1;
+end
+[V,p] = max(Q,[],2);
+iter = k-1;
+delta = delta(1:iter);
 end
 
