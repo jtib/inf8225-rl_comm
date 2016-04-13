@@ -47,7 +47,9 @@
 %\usetheme{Singapore}
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
-\usepackage{pdfpages} 
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{graphicx}
 
 \title{Fast reinforcement learning for energy-efficient wireless communications}
 
@@ -176,7 +178,12 @@ Rule: Average buffer delay is proportional to average buffer occupancy
 \begin{frame}{A few results}
 \begin{figure}
 \begin{center}
-\includegraphics[height=6cm]{deltas.jpg}
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=1\linewidth]{deltas.jpg}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=1\linewidth]{deltas_the_sequel.jpg}
+\end{subfigure}
 \caption{Comparing the required number of iterations to get to the optimal policy}
 \end{center}
 \end{figure}
@@ -218,7 +225,7 @@ We:
 \item implemented other approaches to solve the problem
 \end{itemize}
 Proposed algorithm outperforms existing solutions;
-our algorithms outperform it on some measures but don't present the same advantages.
+our first algorithm outperforms it on some measures but don't present the same advantages.
 \end{frame}
 
 \section{Possibilities for a future work}

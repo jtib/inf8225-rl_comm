@@ -75,4 +75,5 @@ plot(2:iter3,delta3(2:end));
 title('Delta for classic Q-learning');
 
 
-%print('-f1','deltas','-djpeg90');
+print('-f1','deltas','-djpeg90');
+print('-f2','deltas_the_sequel','-djpeg90');
