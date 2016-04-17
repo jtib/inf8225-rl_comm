@@ -16,6 +16,8 @@
 \usepackage{pdfpages}
 \usepackage{float}
 
+\usepackage[nottoc]{tocbibind}
+
 \postdate{
   \begin{center} 
     \vspace*{3cm}
@@ -44,6 +46,26 @@
 
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
+
+Our AI course has allowed us to discover Markov Decision Processes, which we decided to further explore
+in our project.
+Looking for an application for them, we stumbled upon Mastronarde \& Van der Schaar's article,
+`Fast Reinforcement Learning for Energy-Efficient Wireless Communications'\cite{Mastronarde-2011},
+and we chose it as the basis for our work.
+
+The article presents the two researchers' work in developing an algorithm that would enable systems
+to adopt the best policy to quickly send data packets in the most efficient way possible,
+an important goal to achieve since the majority of today's surfing is done on smartphones
+whose battery does not last longer than a day (at best).
+
+In this report, we will first introduce the article, with a quick review of the state of the art
+at the time it was written (2011), then summarize it.
+We will continue with a presentation of some theoretical elements, highlighting the differences between
+what we saw in class and the processes on which the article and our implementations are based,
+and the way the reward matrix used is calculated (a process that does not appear in the article).
+Finally we will talk about our own implementation of classic Q-learning and one of its variants,
+speedy Q-learning, and compare the results we obtain with the results obtained with the authors'algorithm,
+plus the results we get by using value iteration and policy iteration.
 
 \chapter*{1. Reference article}
 \addcontentsline{toc}{chapter}{1. Reference article}
@@ -78,9 +100,8 @@
 \chapter*{Further work \& conclusion}
 \addcontentsline{toc}{chapter}{Further work and conclusion}
 
-\appendix
-
-\chapter{References}
+\bibliographystyle{ieeetr}
+\bibliography{report}
 
 
 \end{document}

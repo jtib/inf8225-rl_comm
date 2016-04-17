@@ -11,4 +11,4 @@
 \contentsline {section}{3.2 Speedy Q-learning}{5}{section*.11}
 \contentsline {section}{3.3 Additional remarks}{5}{section*.12}
 \contentsline {chapter}{Further work and conclusion}{6}{chapter*.13}
-\contentsline {chapter}{\numberline {A}References}{7}{appendix.A}
+\contentsline {chapter}{Bibliographie}{7}{chapter*.14}
