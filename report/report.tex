@@ -15,8 +15,25 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{float}
-
+% Algorithms
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[]{algorithm2e}
+\usepackage{moreverb}
+% Bibliography
 \usepackage[nottoc]{tocbibind}
+
+\lstset{upquote=true,
+        columns=flexible,
+        keepspaces=true,
+        breaklines,
+        breakindent=0pt,
+        basicstyle=\ttfamily,
+        commentstyle=\itshape,
+        keywordstyle=\bfseries,
+        language=Matlab,
+        texcsstyle=*\bfseries}
 
 \postdate{
   \begin{center} 
@@ -81,6 +98,48 @@ plus the results we get by using value iteration and policy iteration.
 
 \section*{2.1 Value iterating \& policy iterating vs. Q-learning}
 \addcontentsline{toc}{section}{2.1 Value iterating \& policy iterating vs. Q-learning}
+
+In our project, we compare the performance of several algorithms against that of the authors.
+These algorithms have to be evaluated along several criteria, among which the elements that need to be known
+for them to work, the speed with which they are executed (partly dependent on the efficency of the implementation and the language used)
+and the number of iterations their internal loop is executed for.
+
+These algorithms are value iteration, policy iteration, classic Q-learning and speedy Q-learning.
+
+\subsection*{2.1.1 Value iteration}
+\addcontentsline{toc}{subsection}{2.1.1 Value iteration}
+
+
+\subsection*{2.1.2 Policy iteration}
+\addcontentsline{toc}{subsection}{2.1.2 Policy iteration}
+
+\subsection*{2.1.3 Classic Q-learning}
+\addcontentsline{toc}{subsection}{2.1.3 Classic Q-learning}
+
+Q-learning is part of a second category of algorithms that do not presuppose the full knowledge of the system.
+Contrary to value iteration and policy iteration, the environment does not need to be known for the algorithm to work.
+The algorithm presented by the authors of our reference article is similar in its requirements, though it goes further and
+actually uses the knowledge we do have about the environment, which makes it more efficient.
+
+Q-learning helps us find the optimal policy by using the interactions between the system and the environment.
+In it, we compute an estimate of the cumulative discounted reward for each action executed in each state.
+
+The algorithm for one step is as follows (from Artificial Intelligence, 3rd edition, French version\cite{Russell-2010}:
+
+\begin{algorithm}[H]
+  \KwData{$s'$ /* current state */, $r'$ /* reward signal */}
+  \KwResult{$Q$ /* action values table indexed by states and actions */, $T$ /* frequency of state-action couples */, $s,a,r$ /*previous state, action and reward */}
+  \If{s final}{
+    $Q(s,Empty) = r'$
+  }
+  \If{$s\neq0$}{
+    $T(s,a)++$\\
+    $Q(s,a)+=\alpha\cdot T(s,a)(r+\gamma\max_{a'}Q(s',a')-Q(s,a))$
+  }
+  $s,a,r=s',\argmax_{a'}f(Q(s',a'),T(s',a')),r'$\\
+  return $a$
+\caption{Q-learning algorithm for one step}
+\end{algorithm}
 
 \section*{2.2 Reward matrix}
 \addcontentsline{toc}{section}{2.2 Reward matrix}

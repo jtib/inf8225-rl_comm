@@ -4,10 +4,13 @@
 \BOOKMARK [1][-]{section*.5}{1.2 Article summary}{chapter*.3}% 4
 \BOOKMARK [0][-]{chapter*.6}{2. Theoretical elements}{}% 5
 \BOOKMARK [1][-]{section*.7}{2.1 Value iterating \046 policy iterating vs. Q-learning}{chapter*.6}% 6
-\BOOKMARK [1][-]{section*.8}{2.2 Reward matrix}{chapter*.6}% 7
-\BOOKMARK [0][-]{chapter*.9}{3. Comparing algorithms}{}% 8
-\BOOKMARK [1][-]{section*.10}{3.1 Classic Q-learning}{chapter*.9}% 9
-\BOOKMARK [1][-]{section*.11}{3.2 Speedy Q-learning}{chapter*.9}% 10
-\BOOKMARK [1][-]{section*.12}{3.3 Additional remarks}{chapter*.9}% 11
-\BOOKMARK [0][-]{chapter*.13}{Further work and conclusion}{}% 12
-\BOOKMARK [0][-]{chapter*.14}{Bibliography}{}% 13
+\BOOKMARK [2][-]{section*.8}{2.1.1 Value iteration}{section*.7}% 7
+\BOOKMARK [2][-]{section*.9}{2.1.2 Policy iteration}{section*.7}% 8
+\BOOKMARK [2][-]{section*.10}{2.1.3 Classic Q-learning}{section*.7}% 9
+\BOOKMARK [1][-]{section*.11}{2.2 Reward matrix}{chapter*.6}% 10
+\BOOKMARK [0][-]{chapter*.12}{3. Comparing algorithms}{}% 11
+\BOOKMARK [1][-]{section*.13}{3.1 Classic Q-learning}{chapter*.12}% 12
+\BOOKMARK [1][-]{section*.14}{3.2 Speedy Q-learning}{chapter*.12}% 13
+\BOOKMARK [1][-]{section*.15}{3.3 Additional remarks}{chapter*.12}% 14
+\BOOKMARK [0][-]{chapter*.16}{Further work and conclusion}{}% 15
+\BOOKMARK [0][-]{chapter*.17}{Bibliography}{}% 16
