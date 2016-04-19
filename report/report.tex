@@ -45,6 +45,9 @@
 \newcommand{\ora}[1]{\overrightarrow{#1}}
 \newcommand{\R}{\mathbb{R}}
 
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
 \begin{document}
 
 \def\labelitemi{$\bullet$}
@@ -109,9 +112,88 @@ These algorithms are value iteration, policy iteration, classic Q-learning and s
 \subsection*{2.1.1 Value iteration}
 \addcontentsline{toc}{subsection}{2.1.1 Value iteration}
 
+One method to find an optimal policy is to find the optimal value function by determining a simple iterative algorithm called value iteration.
+The value iteration method is referenced by Bellman equation for MDP problems which is obtained simply by turning the Bellman optimality equation into an update rule.
+If there exist $n$ possible states, then we have $n$ Bellman equations, one per each state.
+The $n$ equations contain $n$ unknowns which are the utilities of theses states. 
+
+We aim to solve these simultaneous equations to find the utility values.
+These equations are non-linear, since the max operator is not a linear one.
+Hence, it can be determined by a simple iterative algorithm that can be shown as follows:
+
+\[V_{i+1}(s) = R(s) + \gamma \mathrm{max_a} \sum_s P(s,a,s') V_{i}(s')\]
+
+where $i$ is the iteration number.
+Value iteration starts at $i = 0$ and then iterates, repeatedly computing $V_{i+1}$ for all states s, until V converges.
+Value iteration formally requires an infinite number of iteration to converge to $V^*$.
+In practice, it stops once the value function changes by a small amount in a sweep which satisfies the Bellman equations.
+This process is called a value update or Bellman update/backup. 
+The algorithm for value iteration is as follows (from Artificial Intelligence, 3rd edition, French version \cite{Russell-2010}):
+
+  
+\begin{algorithm} \caption{Iterative Value Algorithm}
+\begin{algorithmic}[H]
+\State \textbf{Data:  $P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
+\State \textbf{Local Variables: $V$ , /* Value matrix, initially identical to $R(s)$ */\\
+$V^{'}$, /* Value matrix, initially identical to $R(s)$ */}
+
+\State \textbf{Result:  } $V(s)$ /* Value function */
+\State \textbf{Initilize: } 
+\State $V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
+\Repeat
+%\State $V \gets V'$
+\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
+\State $V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$
+\State $\Delta \gets \max(\Delta, V(s) - V'(s)|)$
+\EndFor
+\Until {$\Delta < \epsilon$}
+\State $\textbf{Return } V(s)$
+\end{algorithmic}
+\end{algorithm}
+
+Note that the value iteration backup is identical to the policy evaluation except that it requires the max operator to be taken over all actions.
 
 \subsection*{2.1.2 Policy iteration}
 \addcontentsline{toc}{subsection}{2.1.2 Policy iteration}
+
+In policy iteration algorithm, the agent manipulates the policy directly, instead of finding it indirectly via the optimal value function. 
+The policy often becomes exactly optimal long before the utility estimation have converged to their true values. This phenomena leads us to another way of finding optimal policies, called policy iteration. Policy iteration picks an initial action arbitrarily by taking rewards on states as
+their utilities and computing a policy according to the maximum expected
+utility. Then it iteratively performs two steps: firstly, it determine the values through
+computing the utility of each state given the current action, and then policy improvement by updating the current policy if possible. 
+To detect when the algorithm has converged, it should only change the policy if the new action for some state improves the expected value; that is, it should stabilize the policy.
+The algorithm for policy iteration is as follows:
+
+\begin{algorithm}
+\caption{Iterative Policy Algorithm}
+\begin{algorithmic}[H]
+\State $\textbf{Data:  $P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
+\State $\textbf{Local Variables:  $V$ , /* Value matrix, initially identical to $R(s)$ */\\$\pi$, /* a policy, initially optimal respecting to $V$ */}
+\State $\textbf{Result:  $V(s)$ /* Value function */}
+
+\State $\textbf{Initilize: }
+\State $V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
+\State $\pi(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
+\State $\mathrm{Policy Evaluation:}$
+\State $V \gets V^{'}$
+\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
+\State $V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$
+\State $\Delta \gets \max(\Delta, V(s) - V^{'}(s)|)$
+\EndFor
+\Until {$\Delta < \epsilon$}
+\State $\mathrm{Policy Improvement:}$
+\State $\mathrm{stable == True}$
+\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
+\State $a \gets \pi(s)$
+\State $\pi(s) \gets \mathrm{argmax}_a \sum_{s'} P(s,a,s')V(s')$
+\If{$ a \neq \pi(s)$}
+\State $\mathrm{stable == False}$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+At the end of algorithm, we test the stable variable; if it is 'True', algorithm terminates, otherwise, control jumps to the Policy Evaluation and continues in an iterative manner. 
+Policy iteration often converges in few iterations. The policy improvement theorem guarantees that these policies works better than the original random policy and achieves to the goal states in the minimum number of steps.
 
 \subsection*{2.1.3 Classic Q-learning}
 \addcontentsline{toc}{subsection}{2.1.3 Classic Q-learning}
