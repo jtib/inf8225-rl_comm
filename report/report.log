@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.7)  21 APR 2016 05:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.7)  21 APR 2016 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,25 +370,58 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks31
 \@floatcapt=\box32
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count121
+\FV@InFile=\read1
+\FV@TabBox=\box33
+\c@FancyVerbLine=\count122
+\FV@StepNumber=\count123
+\FV@OutFile=\write3
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count121
-\lst@gtempboxa=\box33
+\lst@mode=\count124
+\lst@gtempboxa=\box34
 \lst@token=\toks32
-\lst@length=\count122
+\lst@length=\count125
 \lst@currlwidth=\dimen134
-\lst@column=\count123
-\lst@pos=\count124
+\lst@column=\count126
+\lst@pos=\count127
 \lst@lostspace=\dimen135
 \lst@width=\dimen136
-\lst@newlines=\count125
-\lst@lineno=\count126
+\lst@newlines=\count128
+\lst@lineno=\count129
 \lst@maxwidth=\dimen137
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count127
-\lst@skipnumbers=\count128
-\lst@framebox=\box34
+\c@lstnumber=\count130
+\lst@skipnumbers=\count131
+\lst@framebox=\box35
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/09/06 1.5e listings configuration
@@ -399,7 +432,7 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks33
-\c@algorithm=\count129
+\c@algorithm=\count132
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -408,21 +441,21 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count130
-\c@ALG@rem=\count131
-\c@ALG@nested=\count132
+\c@ALG@line=\count133
+\c@ALG@rem=\count134
+\c@ALG@nested=\count135
 \ALG@tlm=\skip56
 \ALG@thistlm=\skip57
-\c@ALG@Lnr=\count133
-\c@ALG@blocknr=\count134
-\c@ALG@storecount=\count135
-\c@ALG@tmpcounter=\count136
+\c@ALG@Lnr=\count136
+\c@ALG@blocknr=\count137
+\c@ALG@storecount=\count138
+\c@ALG@tmpcounter=\count139
 \ALG@tmplength=\skip58
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count137
+\c@AlgoLine=\count140
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -451,25 +484,25 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \interspacetitleruled=\dimen141
 \interspacealgoruled=\dimen142
 \interspacetitleboxruled=\dimen143
-\algocf@inoutbox=\box35
-\algocf@inputbox=\box36
+\algocf@inoutbox=\box36
+\algocf@inputbox=\box37
 \AlCapSkip=\skip67
 \AlCapHSkip=\skip68
 \algoskipindent=\skip69
-\algocf@nlbox=\box37
-\algocf@hangingbox=\box38
-\algocf@untilbox=\box39
+\algocf@nlbox=\box38
+\algocf@hangingbox=\box39
+\algocf@untilbox=\box40
 \algocf@skipuntil=\skip70
-\algocf@capbox=\box40
+\algocf@capbox=\box41
 \algoheightruledefault=\skip71
 \algoheightrule=\skip72
 \algotitleheightruledefault=\skip73
 \algotitleheightrule=\skip74
-\c@algocfline=\count138
-\c@algocfproc=\count139
-\c@algocf=\count140
-\algocf@algoframe=\box41
-\algocf@algobox=\box42
+\c@algocfline=\count141
+\c@algocfproc=\count142
+\c@algocf=\count143
+\algocf@algoframe=\box42
+\algocf@algobox=\box43
 
 ! LaTeX Error: Command \algorithm already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -517,11 +550,11 @@ Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks34
 \verbatim@line=\toks35
-\verbatim@in@stream=\read1
+\verbatim@in@stream=\read2
 )
-\tab@position=\count141
-\tab@size=\count142
-\listing@line=\count143
+\tab@position=\count144
+\tab@size=\count145
+\listing@line=\count146
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
@@ -540,7 +573,7 @@ See the keyval package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36         texcsstyle=*\bfseries}
+l.38         texcsstyle=*\bfseries}
                                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -548,20 +581,20 @@ If that doesn't work, type  X <return>  to quit.
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -599,16 +632,16 @@ LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
+\scratchcounter=\count147
 \scratchdimen=\dimen144
-\scratchbox=\box43
-\nofMPsegments=\count145
-\nofMParguments=\count146
+\scratchbox=\box44
+\nofMPsegments=\count148
+\nofMParguments=\count149
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count147
+\MPscratchCnt=\count150
 \MPscratchDim=\dimen145
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
+\MPnumerator=\count151
+\makeMPintoPDFobject=\count152
 \everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -625,8 +658,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 51.
+\AtBeginShipoutBox=\box45
+Package hyperref Info: Link coloring OFF on input line 70.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -634,22 +667,22 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count150
+\c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 
 (./report.out) (./report.out)
-\@outlinefile=\write3
-\openout3 = `report.out'.
+\@outlinefile=\write4
+\openout4 = `report.out'.
 
-\c@lstlisting=\count151
+\c@lstlisting=\count154
 
 ! Undefined control sequence.
 <argument> ...earning techniques\\ } \\Chris \bsc 
                                                   {Pal} \\ Project (INF8225)}
-l.55 ...} \\Chris \bsc{Pal} \\ Project (INF8225)}}
+l.74 ...} \\Chris \bsc{Pal} \\ Project (INF8225)}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -660,7 +693,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> Farnoush \bsc 
                          {Farhadi} \& Juliette \bsc {Tibayrenc}
-l.56 ...\bsc{Farhadi} \& Juliette \bsc{Tibayrenc}}
+l.75 ...\bsc{Farhadi} \& Juliette \bsc{Tibayrenc}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -671,7 +704,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...ush \bsc {Farhadi} \& Juliette \bsc 
                                                   {Tibayrenc}
-l.56 ...\bsc{Farhadi} \& Juliette \bsc{Tibayrenc}}
+l.75 ...\bsc{Farhadi} \& Juliette \bsc{Tibayrenc}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -686,7 +719,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 
+l.79 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -695,7 +728,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 \@title ...& learning techniques\\ } \\Chris \bsc 
                                                   {Pal} \\ Project (INF8225)}
-l.60 
+l.79 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -703,11 +736,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -715,7 +748,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Undefined control sequence.
 \@author ->Farnoush \bsc 
                          {Farhadi} \& Juliette \bsc {Tibayrenc}
-l.60 
+l.79 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -726,7 +759,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \@author ...noush \bsc {Farhadi} \& Juliette \bsc 
                                                   {Tibayrenc}
-l.60 
+l.79 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -734,16 +767,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<logo_Poly.jpg, id=76, 207.02344pt x 112.92188pt>
+<logo_Poly.jpg, id=84, 207.02344pt x 112.92188pt>
 File: logo_Poly.jpg Graphic file (type jpg)
  <use logo_Poly.jpg>
-Package pdftex.def Info: logo_Poly.jpg used on input line 60.
+Package pdftex.def Info: logo_Poly.jpg used on input line 79.
 (pdftex.def)             Requested size: 284.52756pt x 155.21376pt.
 
 ! Extra }, or forgotten \endgroup.
 \HyOrg@maketitle ...spredate \@date \@bspostdate }
                                                    \maketitlehookd \par \@th...
-l.60 
+l.79 
      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -756,27 +789,27 @@ deleted material, e.g., by typing `I$}'.
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo_
 Poly.jpg>]
 
-! LaTeX Error: \begin{center} on input line 60 ended by \end{titlepage}.
+! LaTeX Error: \begin{center} on input line 79 ended by \end{titlepage}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 
+l.79 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 (./report.toc)
-\tf@toc=\write4
-\openout4 = `report.toc'.
+\tf@toc=\write5
+\openout5 = `report.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \newpage
+l.84 \newpage
               [1
 
 ] [2
@@ -790,7 +823,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 ...algorithms based on dividing the systemâ€
+l.139 ...algorithms based on dividing the systemâ€
                                                   ™s dynamics into a priori ...
 
 You need to provide a definition with \DeclareInputText 
@@ -804,7 +837,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 ...lgorithms based on dividing the systemâ€™
+l.139 ...lgorithms based on dividing the systemâ€™
                                                   s dynamics into a priori k...
 
 You need to provide a definition with \DeclareInputText 
@@ -813,19 +846,19 @@ or \DeclareInputMath before using this key.
 [3
 
 ] [4]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 169.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 188.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 177.
+put line 196.
  [5
 
 ]
 [6]
 ! Undefined control sequence.
-l.243   $s,a,r=s',\argmax
+l.262   $s,a,r=s',\argmax
                          _{a'}f(Q(s',a'),T(s',a')),r'$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -837,7 +870,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Foreach 
                          
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -848,7 +881,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Tau 
                      
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -859,7 +892,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Tau 
                      
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -870,7 +903,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ..._{k+1}(x,a)=Q_k(x,a)+\alpha _k(\Tau 
                                                   _kQ_{k-1}(x,a)-Q_k(x,a))+(...
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -881,7 +914,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...}(x,a)-Q_k(x,a))+(1-\alpha _k)(\Tau 
                                                   _kQ_{k}(x,a)-\Tau _kQ_{k-1...
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -892,7 +925,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...1-\alpha _k)(\Tau _kQ_{k}(x,a)-\Tau 
                                                   _kQ_{k-1}(x,a))$;//SQL upd...
-l.270   }
+l.289   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -904,7 +937,7 @@ and I'll forget about whatever was undefined.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.306   \State
+l.325   \State
                $b^n \gets \mathrm{min}(b^n - f^n(\mathrm{BEP}^n, z^n) + l^n,...
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -912,12 +945,12 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.306   \State
+l.325   \State
                $b^n \gets \mathrm{min}(b^n - f^n(\mathrm{BEP}^n, z^n) + l^n,...
 I'm ignoring this, since I wasn't doing a \csname.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
@@ -928,21 +961,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306   \State
+l.325   \State
                $b^n \gets \mathrm{min}(b^n - f^n(\mathrm{BEP}^n, z^n) + l^n,...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 306
+Underfull \hbox (badness 10000) detected at line 325
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.307   \State
+l.326   \State
                $\mathrm{P}^x = \mathrm{P}^x(y) = [\mathrm{P}^x(x^{'} | x,y)]...
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -950,7 +983,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.307   \State
+l.326   \State
                $\mathrm{P}^x = \mathrm{P}^x(y) = [\mathrm{P}^x(x^{'} | x,y)]...
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -961,21 +994,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.307   \State
+l.326   \State
                $\mathrm{P}^x = \mathrm{P}^x(y) = [\mathrm{P}^x(x^{'} | x,y)]...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 307
+Underfull \hbox (badness 10000) detected at line 326
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.308   \State
+l.327   \State
                $\mathrm{P}^h = \mathrm{P}^h(h^{'}|h)$
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -983,7 +1016,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.308   \State
+l.327   \State
                $\mathrm{P}^h = \mathrm{P}^h(h^{'}|h)$
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -994,20 +1027,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308   \State
+l.327   \State
                $\mathrm{P}^h = \mathrm{P}^h(h^{'}|h)$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 308
+Underfull \hbox (badness 10000) detected at line 327
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.309   \State
+l.328   \State
                $ \mathrm{P}^b = \mathrm{P}^b([b, h, x], \mathrm{BEP}, y, x) =
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1015,7 +1048,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.309   \State
+l.328   \State
                $ \mathrm{P}^b = \mathrm{P}^b([b, h, x], \mathrm{BEP}, y, x) =
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1026,20 +1059,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.309   \State
+l.328   \State
                $ \mathrm{P}^b = \mathrm{P}^b([b, h, x], \mathrm{BEP}, y, x) =
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 309
+Underfull \hbox (badness 10000) detected at line 328
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.315   \State
+l.334   \State
                $s \gets (b, h, x)$
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1047,7 +1080,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.315   \State
+l.334   \State
                $s \gets (b, h, x)$
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1058,20 +1091,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.315   \State
+l.334   \State
                $s \gets (b, h, x)$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 315
+Underfull \hbox (badness 10000) detected at line 334
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.316   \State
+l.335   \State
                $a \gets (\mathrm{BEP}, y, z)$
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1079,7 +1112,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.316   \State
+l.335   \State
                $a \gets (\mathrm{BEP}, y, z)$
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1090,20 +1123,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.316   \State
+l.335   \State
                $a \gets (\mathrm{BEP}, y, z)$
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 316
+Underfull \hbox (badness 10000) detected at line 335
 [][]
  []
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@0 
-l.317   \State
+l.336   \State
                $\mathrm{P}(s^{'}|s, a) = \mathrm{P}^b \times \mathrm{P}^h \t...
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1111,7 +1144,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
                                                   \relax \def \ALG@thisblock...
-l.317   \State
+l.336   \State
                $\mathrm{P}(s^{'}|s, a) = \mathrm{P}^b \times \mathrm{P}^h \t...
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1122,33 +1155,33 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.317   \State
+l.336   \State
                $\mathrm{P}(s^{'}|s, a) = \mathrm{P}^b \times \mathrm{P}^h \t...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 317
+Underfull \hbox (badness 10000) detected at line 336
 [][]
  []
 
-[9] <deltas.jpg, id=173, 1204.5pt x 903.375pt>
+[9] <deltas.jpg, id=183, 1204.5pt x 903.375pt>
 File: deltas.jpg Graphic file (type jpg)
  <use deltas.jpg>
-Package pdftex.def Info: deltas.jpg used on input line 360.
+Package pdftex.def Info: deltas.jpg used on input line 379.
 (pdftex.def)             Requested size: 369.88582pt x 277.41054pt.
  [10
 
 ]
-<deltas_the_sequel.jpg, id=178, 1204.5pt x 903.375pt>
+<deltas_the_sequel.jpg, id=188, 1204.5pt x 903.375pt>
 File: deltas_the_sequel.jpg Graphic file (type jpg)
 
 <use deltas_the_sequel.jpg>
-Package pdftex.def Info: deltas_the_sequel.jpg used on input line 367.
+Package pdftex.def Info: deltas_the_sequel.jpg used on input line 386.
 (pdftex.def)             Requested size: 369.88582pt x 277.41054pt.
 
-Overfull \hbox (5.50859pt too wide) in paragraph at lines 372--373
+Overfull \hbox (5.50859pt too wide) in paragraph at lines 391--392
 []\T1/cmr/m/n/12 Note: We achieve sim-i-lar re-sults when chang-ing our pa-ram-
 e-ters (in $[]$;
  []
@@ -1158,90 +1191,96 @@ e-ters (in $[]$;
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.373 
+l.392 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 0.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.373 
-       <./deltas.jpg> <./deltas_the_sequel.jpg>] [12] (./report.bbl [13
+l.392 
+       <./deltas.jpg> <./deltas_the_sequel.jpg>]
+<power_delay.jpg, id=195, 562.1pt x 421.575pt>
+File: power_delay.jpg Graphic file (type jpg)
+ <use power_delay.jpg>
+Package pdftex.def Info: power_delay.jpg used on input line 424.
+(pdftex.def)             Requested size: 398.33858pt x 298.75426pt.
+ [12]
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.0.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.434 \VerbatimInput{table.txt}
+                                <./power_delay.jpg>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 453--456
+
+ []
+
+(./report.bbl [15
 
 ])
 
-! LaTeX Error: \begin{titlepage} on input line 60 ended by \end{document}.
+! LaTeX Error: \begin{titlepage} on input line 79 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.407 \end{document}
+l.474 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
-[14
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
+[16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: D9B22A3DFE652FB928E6915E9AD22093;1191
-(rerunfilecheck)             After:  A15165D597A40A54F9CBD7024AF6B5C2;1260.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 407.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 3318E636C5029193B3096B1065A76FFC;1332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 474.
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 60 ({)
-### semi simple group (level 1) entered at line 60 (\begingroup)
+### simple group (level 2) entered at line 79 ({)
+### semi simple group (level 1) entered at line 79 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11622 strings out of 493089
- 166855 string characters out of 6134843
- 327528 words of memory out of 5000000
- 14853 multiletter control sequences out of 15000+600000
- 23614 words of font info for 64 fonts, out of 8000000 for 9000
+ 12470 strings out of 493089
+ 178508 string characters out of 6134843
+ 348170 words of memory out of 5000000
+ 15682 multiletter control sequences out of 15000+600000
+ 24697 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,12n,40p,822b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter*.19} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.18} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on report.pdf (15 pages, 449283 bytes).
+ 29i,12n,40p,822b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
+-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on report.pdf (17 pages, 501855 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

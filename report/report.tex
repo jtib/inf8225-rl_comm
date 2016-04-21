@@ -15,6 +15,8 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
 % Algorithms
 \usepackage{listings}
 \usepackage{algorithm}
@@ -34,6 +36,23 @@
         keywordstyle=\bfseries,
         language=Matlab,
         texcsstyle=*\bfseries}
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+ %
+ frame=lines,  % top and bottom rule only
+ framesep=2em, % separation between frame and text
+ rulecolor=\color{Gray},
+ %
+ label=\fbox{\color{Black}data.txt},
+ labelposition=topline,
+ %
+ commandchars=\|\(\), % escape character and argument delimiters for
+                      % commands within the verbatim
+ commentchar=*        % comment character
+}
+
 
 \postdate{
   \begin{center} 
@@ -392,13 +411,61 @@ Now, this measurement would be more significant if implemented on the platform o
 and of course tightly optimized.
 As it stands, it does not appear to us of high significance, except perhaps to point out that algorithms that don't have to involve full matrices tend to be faster.
 
-\subsection*{3.2.3 }
+However, our two (tentative) indicators of time so far seem to point out that, while the policies found by the two Q-learning based comparison algorithms are probably "less optimal" than the one found by the constrained policy iteration algorithm, since they do not make use of the known dynamics of the system, they tend to be quicker.
+
+\subsection*{3.2.3 Power-delay point}
+\addcontentsline{toc}{subsection}{3.2.3 Power-delay point}
+
+Finally, we want to get an idea of the relationship between holding cost and power.
+We run our algorithms a few times and get the following graph:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{power_delay.jpg}
+\caption{Power-delay performance of the five algorithms}
+\end{center}
+\end{figure}
+
+The graph here was made with $P_{on}=0$ and random values on [-18.82;-2.08] for the channel states, as well as $\gamma$ random between 0.51 and 0.99.
+
+More runs are made with $P_{on}=80, 160$ and $320$, two determined channel states vectors and $\gamma=0.9$.
+The results are summarized below:
+
+\VerbatimInput{table.txt}
+
+They are, of course, much less significant than those of the article, since they do not consider an average but sample points.
+
+They do show that, while the variables returned by the classic Q learning algorithm seem otherwise normal (they are very similar to what we get with the SSQL), the power we get is always zero. We unfortunately have not had enough time to investigate more closely the phenomenon.
+
+We also notice that, on a few samples, the difference in power is weak, but the holding constraints it corresponds to (that depend
+both on the algorithm used and the channel states vector) are where the difference lie.
 
 \section*{3.3 Additional remarks}
 \addcontentsline{toc}{section}{3.3 Additional remarks}
 
+The indicators singled out for observation are interesting since they allow us to bring to light some aspects of the constrained policy algorithm that were not considered in the article, namely the time taken by the specialized algorithm compared to the unspecialized ones.
+Properly implemented, however, the algorithm developed by the authors should still be about as fast as other specialized algorithms,
+and bring better results, since it makes use of known dynamics that are usually neglected.
+
 \chapter*{Further work \& conclusion}
 \addcontentsline{toc}{chapter}{Further work and conclusion}
+
+In this project, we reproduce the implementation of two MDP-based approaches, value iteration and policy iteration presented in [1] for solving the problem of energy-efficient wireless communication systems when the traffic arrival and channel statistics are unknown. In this implementation, we consider both physical and system level to tradeoff delay and energy. Furthermore, we present the algorithm for calculating the reward matrix which was not presented in the paper. To enrich our
+experiments, we implement the Q-learning and a synchronous version of Speedy Q-learning as a generative model to compare the obtained results of MDP with that of given by MDP approach. It should be noted that the final implementation is a bit different from
+the algorithms since we need to use more return variables than indicated in pseudocodes to be able to compare the algorithms.\\
+
+Performing algorithms on simulated data demonstrates that  we obtain similar results when changing our parameters in terms of convergence speed. While the convergence speed is faster, the synchronous speedy Q-learning, value iteration and enhanced policy iteration, take much smaller values from the first step for constrained policy iteration, and the curve is much smoother. Classic Q-learning performs the worst on both points.  
+
+Finally, the Enhanced policy iteration and value iteration take much more time compared others while the Constrained policy iteration indicates the best time in the terms of the time taken by each algorithm.
+
+However, these comparisons with unspecialized algorithms must not make us forget that the efficiency of the final policy compared to other algorithms that also tackle this particular issue is what we should strive for in an industrial context.
+
+To further advance this project, it would be particularly interesting to compare the results obtained by the authors against those obtained by more recent algorithms that tackle similar issue.
+The conclusion elaborated by Mastronarde and Van der Schaar mentions, as a problem of interest, deploying this solution over a network.
+The results could then be compared to other solutions such as the one developed by Liu et al. [5]
+
+
+
 
 \bibliographystyle{ieeetr}
 \bibliography{report}

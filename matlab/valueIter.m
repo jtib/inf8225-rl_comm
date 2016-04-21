@@ -45,7 +45,7 @@ while (delta > thresh)
     
     delta(iter) = max(abs(V - oldV));
     
-    fprintf('iter = %d; backups = %d; delta = %d;\n', iter, numBackups(iter), delta(iter));
+    %fprintf('iter = %d; backups = %d; delta = %d;\n', iter, numBackups(iter), delta(iter));
 end
 fprintf('total backups = %d\n', sum(numBackups));
 

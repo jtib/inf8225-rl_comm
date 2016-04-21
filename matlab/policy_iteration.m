@@ -46,6 +46,6 @@ while ~done
   oldp = p;
   oldQ = Q;
   
-  fprintf('iter = %d; delta = %d;\n', iter-1, delta(iter));
+  %fprintf('iter = %d; delta = %d;\n', iter-1, delta(iter));
 end
 
