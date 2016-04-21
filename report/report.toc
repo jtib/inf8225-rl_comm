@@ -9,10 +9,10 @@
 \contentsline {subsection}{2.1.2 Policy iteration}{6}{section*.9}
 \contentsline {subsection}{2.1.3 Classic Q-learning}{7}{section*.10}
 \contentsline {subsection}{2.1.4 Speedy Q-learning}{8}{section*.11}
-\contentsline {section}{2.2 Reward matrix}{8}{section*.12}
-\contentsline {chapter}{3. Comparing algorithms}{9}{chapter*.13}
-\contentsline {section}{3.1 Classic Q-learning}{9}{section*.14}
-\contentsline {section}{3.2 Speedy Q-learning}{9}{section*.15}
-\contentsline {section}{3.3 Additional remarks}{9}{section*.16}
-\contentsline {chapter}{Further work and conclusion}{10}{chapter*.17}
-\contentsline {chapter}{Bibliography}{11}{chapter*.18}
+\contentsline {section}{2.2 Reward matrix}{9}{section*.12}
+\contentsline {chapter}{3. Comparing algorithms}{10}{chapter*.13}
+\contentsline {section}{3.1 Classic Q-learning}{10}{section*.14}
+\contentsline {section}{3.2 Speedy Q-learning}{10}{section*.15}
+\contentsline {section}{3.3 Additional remarks}{10}{section*.16}
+\contentsline {chapter}{Further work and conclusion}{11}{chapter*.17}
+\contentsline {chapter}{Bibliography}{12}{chapter*.18}

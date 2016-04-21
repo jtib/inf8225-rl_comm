@@ -273,10 +273,57 @@ The algorithm is presented in \cite{ghavamzadeh2011speedy} as follows:
 \end{algorithm}
 
 We notice that in the update rule, the second term is made more important by its learning step $1 - \alpha_k$.
-The 
+The gist of why the speedy Q-learning algorithm is faster, or rather has a lower bound on its performance than the classic
+Q-learning algorithm, is shown is section 3.2 of the article:
+what interests us in particular, here, is that `$Q_T$ converges almost surely to $Q*$ with the rate $\sqrt{1/T}$'.
 
 \section*{2.2 Reward matrix}
 \addcontentsline{toc}{section}{2.2 Reward matrix}
+
+Our reference article skips over presenting the way the reward matrix is calculated,
+while it is an interesting problem.
+Hence, we present here the algorithm used to compute it:
+
+\begin{algorithm}[H]
+  \KwData{$n \in \{0, 1, ...\}$\\
+          $l^n:$ \texttt{Data arrival,  i.i.d}\\
+          $\mathrm{states} = 
+          \begin{cases}
+          b^n \in \{0, \cdots, \mathrm{B}\}: \texttt{Buffer State}\\
+          h^n: \texttt{Channel State}\\
+          x^n \in \{\mathrm{on}, \mathrm{off}\}:  \texttt{Power Management State}\\
+          \end{cases}$
+
+          $\mathrm{actions} = 
+          \begin{cases}
+          z^n, 0 \leq z^n \leq b^n: \texttt{Packet Throughput}\\    		
+          \mathrm{BEP}^n: \texttt{Bit Error Probability}\\
+          y^n \in \{s_{\mathrm{on}}, s_{\mathrm{off}}\}: \texttt{Power Management Action}\\
+          f^n, 0 \leq f^n \leq z^n: \texttt{Goodput}\\
+          \end{cases}$
+          }
+  Initialize {\strut$b^0 \gets b_{init}$}\\
+  \State $b^n \gets \mathrm{min}(b^n - f^n(\mathrm{BEP}^n, z^n) + l^n, \mathrm{B})$
+  \State $\mathrm{P}^x = \mathrm{P}^x(y) = [\mathrm{P}^x(x^{'} | x,y)]_{x, x^{'}}$
+  \State $\mathrm{P}^h = \mathrm{P}^h(h^{'}|h)$
+  \State $ \mathrm{P}^b = \mathrm{P}^b([b, h, x], \mathrm{BEP}, y, x) = 
+          \begin{cases}
+          \sum_{f=0}^{z} \mathrm{P}^l(b^{'} - [b-f]) \mathrm{P}^f(f|\mathrm{BEP}, z), &\text{if } b^{'} \leq \mathrm{B} \\
+          \sum_{f=0}^{z} \sum_{l=\mathrm{B}-[b-f]}^{\infty} \mathrm{P}^l (l) \mathrm{P}^f(f|\mathrm{BEP}, z), &\text{if } b^{'} = \mathrm{B}
+          \end{cases}$
+          
+  \State $s \gets (b, h, x)$ 
+  \State $a \gets (\mathrm{BEP}, y, z)$
+  \State $\mathrm{P}(s^{'}|s, a) = \mathrm{P}^b \times \mathrm{P}^h \times \mathrm{P}^x$
+  \caption{Computing the reward matrix}
+\end{algorithm}
+
+As we can see, the reward matrix is computed from indicators of the state we are in, which depends on the buffer state, the channel state
+and the power management state, as well as from indicators of the actions we "take" (this is simulated data).
+
+We find, with the reward matrix, the underlying real-life significance of the Markov process we work with in all the previous algorithms
+(value iteration, policy iteration, two versions of Q-learning).
+
 
 \chapter*{3. Comparing algorithms}
 \addcontentsline{toc}{chapter}{3. Comparing algorithms}
