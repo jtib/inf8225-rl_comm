@@ -10,4 +10,9 @@ S.~Russell and P.~Norvig, {\em Artificial Intelligence: A Modern Approach}.
 \newblock Prentice Hall Series in Artificial Intelligence, Prentice Hall,
   3rd~ed., 2010.
 
+\bibitem{ghavamzadeh2011speedy}
+M.~Ghavamzadeh, H.~J. Kappen, M.~G. Azar, and R.~Munos, ``Speedy q-learning,''
+  in {\em Advances in neural information processing systems}, pp.~2411--2419,
+  2011.
+
 \end{thebibliography}

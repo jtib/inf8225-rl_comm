@@ -96,6 +96,32 @@ plus the results we get by using value iteration and policy iteration.
 \section*{1.2 Article summary}
 \addcontentsline{toc}{section}{1.2 Article summary}
 
+In this project, we consider the problem of energy-efficient point-to-point
+transmission of delay-sensitive data in dynamic environments based on Mastronarde \& Van der Schaar's paper. In such environments there are time-varying channel conditions (e.g., fading channel) and dynamic traffic loads in which the main concern is the reliable delivery of data to the receiver within a tolerable delay. 
+The research for addressing this problem can be roughly divided into two categories: 
+physical (PHY) layer-centric solutions such as power-control and adaptive modulation and coding (AMC) 
+and system-centric solutions such as dynamic power management \cite{Mastronarde-2011}.
+Although these techniques are different significantly, they
+can be applied to trade-off delay and energy to enhance the lifetime of battery consumption devices.
+An excessive amount of PHY-centric methods focus on optimal single-user power-control to minimize
+the transmission power subject to queuing delay constraints. 
+The main disadvantage of such methods is that they typically require statistical knowledge of the underlying dynamics like the channel state and traffic distributions, which is not always available. 
+PHY-centric methods are effective for minimizing transmission power. 
+But, a considerable amount of power are wasted in such systems for staying the wireless
+card on to be ready to transmit. 
+To address this problem, System-level solutions are applied that  rely on DPM, which enables system components to be put into low-power states when they are not required. 
+In this paper authors consider the structure of the problem to the DPM and exhibit suboptimal learning performance. They adapt the power-control, AMC, and DPM policies according to the current and future traffic and channel conditions. 
+Furthermore, they provide a unified framework for jointly optimizing system-level and PHY-centric power management for delay-sensitive wireless at the first time.
+They suggest a novel decomposition of the value iteration and Reinforcement Learning algorithms based on dividing the system’s dynamics into a priori known and unknown elements. Using these partial system information requires to be learned less than when using conventional Reinforcement Learning algorithms and avoids the need for action exploration, which leads to speed up the adaptation and performance of existing Reinforcement Learning methods. 
+The method does not need any priori information about the traffic arrival and channel statistics
+to determine the jointly optimal physical-layer and system-level power management strategies; 
+It also applies partial information about the system in a way that less information required to be learned than when using conventional reinforcement learning algorithms; and by using this approach, we don't need for action exploration, which severely restricts the adaptation speed and run-time performance of conventional reinforcement learning methods.
+\\ 
+We try to implement their proposed framework for simultaneously utilizing physical and system-level techniques to minimize energy consumption, under delay constraints, in the presence of stochastic and unknown traffic and channel conditions. 
+The problem is formulated as a Markov decision process and solve it using value iteration and policy iteration methods. We aim to find the optimal policy (directly or indirectly by optimizing the
+value function). We also implement another solution based on Q-learning consists of dynamics and reward function initially unknown to learn the best policy from history.
+We compare the MDP results with that of obtained by Q-learning methods.
+
 \chapter*{2. Theoretical elements}
 \addcontentsline{toc}{chapter}{2. Theoretical elements}
 
@@ -131,24 +157,19 @@ This process is called a value update or Bellman update/backup.
 The algorithm for value iteration is as follows (from Artificial Intelligence, 3rd edition, French version \cite{Russell-2010}):
 
   
-\begin{algorithm} \caption{Iterative Value Algorithm}
-\begin{algorithmic}[H]
-\State \textbf{Data:  $P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
-\State \textbf{Local Variables: $V$ , /* Value matrix, initially identical to $R(s)$ */\\
-$V^{'}$, /* Value matrix, initially identical to $R(s)$ */}
-
-\State \textbf{Result:  } $V(s)$ /* Value function */
-\State \textbf{Initilize: } 
-\State $V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
-\Repeat
-%\State $V \gets V'$
-\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
-\State $V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$
-\State $\Delta \gets \max(\Delta, V(s) - V'(s)|)$
-\EndFor
-\Until {$\Delta < \epsilon$}
-\State $\textbf{Return } V(s)$
-\end{algorithmic}
+\begin{algorithm}[H]
+\KwData{$P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
+\KwResult{$V(s)$ /* Value function */}
+    Initialize:\\  
+    $V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$\\
+    Repeat\\
+    $V \gets V'$ \\
+    \ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}{
+    $V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$
+    $\Delta \gets \max(\Delta, V(s) - V'(s)|)$}
+    Until {$\Delta < \epsilon$}\\
+    return $V(s)$
+\caption{Iterative Value Algorithm}
 \end{algorithm}
 
 Note that the value iteration backup is identical to the policy evaluation except that it requires the max operator to be taken over all actions.
@@ -164,32 +185,28 @@ computing the utility of each state given the current action, and then policy im
 To detect when the algorithm has converged, it should only change the policy if the new action for some state improves the expected value; that is, it should stabilize the policy.
 The algorithm for policy iteration is as follows:
 
-\begin{algorithm}
+\begin{algorithm}[H]
+\KwData{$P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
+\KwResult{$V(s)$ /* Value function */}
+Initialize \\
+$V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$\\
+$\pi(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$\\
+$\mathrm{Policy Evaluation:}$\\
+$V \gets V^{'}$\\
+\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}{
+$V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$\\
+$\Delta \gets \max(\Delta, V(s) - V^{'}(s)|)$
+}
+until {$\Delta < \epsilon$}\\
+$\mathrm{Policy Improvement:}$\\
+$\mathrm{stable == True}$\\
+\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}{
+$a \gets \pi(s)$\\
+$\pi(s) \gets \mathrm{argmax}_a \sum_{s'} P(s,a,s')V(s')$\\
+\If{$ a \neq \pi(s)$}{
+$\mathrm{stable == False}$
+}}
 \caption{Iterative Policy Algorithm}
-\begin{algorithmic}[H]
-\State $\textbf{Data:  $P(s,a,s')$ /* a transition matrix */, $a$ /* actions */, $R(s)$ /* reward signal */, $\gamma$ /* discount*/, $\epsilon$ /* the maximum error allowed in the utility of any state */}
-\State $\textbf{Local Variables:  $V$ , /* Value matrix, initially identical to $R(s)$ */\\$\pi$, /* a policy, initially optimal respecting to $V$ */}
-\State $\textbf{Result:  $V(s)$ /* Value function */}
-
-\State $\textbf{Initilize: }
-\State $V(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
-\State $\pi(s) \gets \texttt{arbitrarily}$, for all $s \in \mathcal S^+$
-\State $\mathrm{Policy Evaluation:}$
-\State $V \gets V^{'}$
-\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
-\State $V^{'}(s) \gets R(s) + \gamma \mathrm{max_a} \sum_{s'} P(s,a,s') V(s')$
-\State $\Delta \gets \max(\Delta, V(s) - V^{'}(s)|)$
-\EndFor
-\Until {$\Delta < \epsilon$}
-\State $\mathrm{Policy Improvement:}$
-\State $\mathrm{stable == True}$
-\ForEach {$\texttt{state  }$ $s \in \mathcal S^+$}
-\State $a \gets \pi(s)$
-\State $\pi(s) \gets \mathrm{argmax}_a \sum_{s'} P(s,a,s')V(s')$
-\If{$ a \neq \pi(s)$}
-\State $\mathrm{stable == False}$
-\EndFor
-\end{algorithmic}
 \end{algorithm}
 
 At the end of algorithm, we test the stable variable; if it is 'True', algorithm terminates, otherwise, control jumps to the Policy Evaluation and continues in an iterative manner. 
@@ -222,6 +239,36 @@ The algorithm for one step is as follows (from Artificial Intelligence, 3rd edit
   return $a$
 \caption{Q-learning algorithm for one step}
 \end{algorithm}
+
+\subsection*{2.1.4 Speedy Q-learning}
+\addcontentsline{toc}{subsection}{2.1.4 Speedy Q-learning}
+
+Speedy Q-learning is developed in the article `Speedy Q-learning' (Ghavamzadeh et al. \cite{ghavamzadeh2011speedy}).
+It is, as its name indicates, a variant of Q-learning that converges faster than the form we presented in the previous subsection.
+We use the synchronous version, as presented in the paper, since we do have a generative model.
+This is, however, a restriction on the actual effectiveness of applying this algorithm that we will have to keep in mind later when comparing results.
+
+The algorithm is presented in \cite{ghavamzadeh2011speedy} as follows:
+
+\begin{algorithm}[H]
+  \KwData{$Q_0$ /* Initial value for Q */, $\gamma$ /* discount factor */, $T$ number of iterations,$R$ reward matrix}
+  \KwResult{$Q_T$}
+  $Q_{-1} = Q_0$;\\
+  \For{$k=0:1:T-1$}{
+    $\alpha_k=\frac{1}{k+1}$;\\
+    \Foreach{$(x,a)$}{
+      Generate next state sample $y_k$\\
+      $\Tau_k Q_{k-1}(x,a)=R(x,a)+\gamma\max_{a\in A}{Q_{k-1}(y_k,a)}$;\\
+      $\Tau_k Q_{k}(x,a)=R(x,a)+\gamma\max_{a\in A}{Q_{k}(y_k,a)}$;// Empirical Bellman operator\\
+      $Q_{k+1}(x,a)=Q_k(x,a)+\alpha_k(\Tau_kQ_{k-1}(x,a)-Q_k(x,a))+(1-\alpha_k)(\Tau_kQ_{k}(x,a)-\Tau_kQ_{k-1}(x,a))$;//SQL update rule
+    }
+  }
+  return $Q_T$
+\caption{Speedy Q-learning}
+\end{algorithm}
+
+We notice that in the update rule, the second term is made more important by its learning step $1 - \alpha_k$.
+The 
 
 \section*{2.2 Reward matrix}
 \addcontentsline{toc}{section}{2.2 Reward matrix}
