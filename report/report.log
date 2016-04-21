@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.7)  21 APR 2016 01:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.7)  21 APR 2016 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,7 +790,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 ...algorithms based on dividing the systemâ€
+l.120 ...algorithms based on dividing the systemâ€
                                                   ™s dynamics into a priori ...
 
 You need to provide a definition with \DeclareInputText 
@@ -804,7 +804,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 ...lgorithms based on dividing the systemâ€™
+l.120 ...lgorithms based on dividing the systemâ€™
                                                   s dynamics into a priori k...
 
 You need to provide a definition with \DeclareInputText 
@@ -813,19 +813,19 @@ or \DeclareInputMath before using this key.
 [3
 
 ] [4]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 164.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 169.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 172.
+put line 177.
  [5
 
 ]
 [6]
 ! Undefined control sequence.
-l.238   $s,a,r=s',\argmax
+l.243   $s,a,r=s',\argmax
                          _{a'}f(Q(s',a'),T(s',a')),r'$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -837,7 +837,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Foreach 
                          
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -848,7 +848,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Tau 
                      
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -859,7 +859,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \Tau 
                      
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -870,7 +870,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ..._{k+1}(x,a)=Q_k(x,a)+\alpha _k(\Tau 
                                                   _kQ_{k-1}(x,a)-Q_k(x,a))+(...
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -881,7 +881,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...}(x,a)-Q_k(x,a))+(1-\alpha _k)(\Tau 
                                                   _kQ_{k}(x,a)-\Tau _kQ_{k-1...
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -892,7 +892,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...1-\alpha _k)(\Tau _kQ_{k}(x,a)-\Tau 
                                                   _kQ_{k-1}(x,a))$;//SQL upd...
-l.265   }
+l.270   }
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -912,23 +912,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{document}
+l.300 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
 [11
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 15205A3E33FCA9C571CB1198723EA625;1127.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  )
 (\end occurred inside a group at level 2)
 
@@ -936,13 +936,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
 ### semi simple group (level 1) entered at line 60 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11583 strings out of 493089
- 166327 string characters out of 6134843
- 325528 words of memory out of 5000000
- 14833 multiletter control sequences out of 15000+600000
+ 11585 strings out of 493089
+ 166360 string characters out of 6134843
+ 327528 words of memory out of 5000000
+ 14834 multiletter control sequences out of 15000+600000
  23614 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,40p,474b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,40p,822b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -962,10 +962,10 @@ texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on report.pdf (12 pages, 280794 bytes).
+Output written on report.pdf (12 pages, 282938 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 38 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
