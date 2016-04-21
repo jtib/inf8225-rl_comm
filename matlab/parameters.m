@@ -19,12 +19,13 @@ bitrate = fs.*betaSet;                         % bit rate (bits/second)
 pktRate = bitrate./L;                          % packet rate (packets/second)
 
 % Channel Information
+channelStates_dB = -18.82 + (-2.08+18.82).*rand(1,8);
 %channelStates_dB = [-18.82, -13.79, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
-channelStates_dB = [-18.82, -12,36, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
+%channelStates_dB = [-18.82, -12,36, -11.23, -9.37, -7.80, -6.30, -4.68, -2.08];  % channel SNR dB
 channelBoundary = [0, 0.028, 0.058, 0.096, 0.14, 0.198, 0.278, 0.416, Inf];      % channel bin boundaries
 
 % State and action sets
-B = 25;                                          % buffer size
+B = 50;                                          % buffer size
 bufferStates = [0:B];                            % buffer state set
 channelStates = 10.^(channelStates_dB/10);       % channel states (SNR)
 pmStates = [OFF ON];                             % power management state set
@@ -41,7 +42,8 @@ M = length(arrivalDistr)-1;                                    % maximum number 
 
 % Other System parameters
 deltaT = 1/100;                                                 % time slot duration (sec)
-discount_factor = 0.98;                                         % discount factor
+%discount_factor = 0.9;                                         % discount factor
+discount_factor = 0.51 + 0.48.*rand;
 lambda = 0.1;                                                   % Delay-power tradeoff
                                                                 % Setting lambda to 0 will cause numerical errors when computating the optimal policy
 lo = 0.05;                                      % lower bound on lambda for bisection search

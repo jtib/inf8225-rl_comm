@@ -324,15 +324,75 @@ and the power management state, as well as from indicators of the actions we "ta
 We find, with the reward matrix, the underlying real-life significance of the Markov process we work with in all the previous algorithms
 (value iteration, policy iteration, two versions of Q-learning).
 
-
 \chapter*{3. Comparing algorithms}
 \addcontentsline{toc}{chapter}{3. Comparing algorithms}
 
-\section*{3.1 Classic Q-learning}
-\addcontentsline{toc}{section}{3.1 Classic Q-learning}
+To compare the efficiency of the four algorithms we talked about against the efficiency of the authors' algorithm,
+we use Matlab to implement them and obtain graphics of the most interesting measurements.
 
-\section*{3.2 Speedy Q-learning}
-\addcontentsline{toc}{section}{3.2 Speedy Q-learning}
+\section*{3.1 Implementation notes}
+\addcontentsline{toc}{section}{3.1 Implementation notes}
+
+Our first two algorithms, value iteration and policy iteration, are already implemented
+(initially as a benchmark against which to compare the performance of the article's algorithm, constrained policy iteration).
+They are not part of the same category of algorithms as the two others, since the problem is not reinforcement learning.
+Since we use simulated data, though, we can use them as well as the reinforcement learning algorithms.
+Their final implementation is a bit different from the algorithms we wrote above, since we need to use more return variables than indicated here to be able to compare the algorithms.
+
+The returned variables in the classic Q-learning and speedy Q-learning algorithms are similarly modified as well.
+
+\section*{3.2 Results}
+\addcontentsline{toc}{section}{3.2 Results}
+
+We use several measurements to compute our results.
+
+\subsection*{3.2.1 Convergence speed}
+\addcontentsline{toc}{subsection}{3.2.1 Convergence speed}
+
+We first observe the convergence speed, that we can observe easily by using the diminution of $\delta$
+(maximum difference between $Q_k$ and $Q_{k-1}$ for Q-learning, and the $Q$ used in this implementation of policy learning,
+and maximum difference between $V_k$ and $V_{k-1}$ for value iteration; difference between $\lambda_k$ and $\lambda_{k-1}$ for the authors' algorithm, all of this in absolute value).
+
+We display it against the number of iterations it takes each algorithm to take it to near 0 (it is our convergence criterion):
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{deltas.jpg}
+\caption{Deltas for value iteration and policy iteration}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{deltas_the_sequel.jpg}
+\caption{Deltas for constrained policy iteration, synchronous speedy Q-learning and classic Q-learning}
+\end{center}
+\end{figure}
+
+Note: We achieve similar results when changing our parameters (in $\verb|parameters.m|$; we randomized some of them).
+
+The figures show us that, while the convergence speed is faster, in number of iterations, for synchronous speedy Q-learning,
+value iteration and enhanced policy iteration, they take much smaller values from the first step for constrained policy iteration, for
+which the curve is much smoother.
+Classic Q-learning performs the worst by far on both points.
+
+\subsection*{3.2.2 Real time used}
+\addcontentsline{toc}{subsection}{3.2.2 Real time used}
+
+Measuring the time taken by each algorithm, we get the following consistent ranking:
+\begin{enumerate}
+\item Enhanced policy iteration
+\item Value iteration
+\item Classic Q-learning
+\item Speedy synchronous Q-learning
+\item Constrained policy iteration
+\end{enumerate}
+
+Now, this measurement would be more significant if implemented on the platform on which these algorithms would be used (end user case),
+and of course tightly optimized.
+As it stands, it does not appear to us of high significance, except perhaps to point out that algorithms that don't have to involve full matrices tend to be faster.
+
+\subsection*{3.2.3 }
 
 \section*{3.3 Additional remarks}
 \addcontentsline{toc}{section}{3.3 Additional remarks}

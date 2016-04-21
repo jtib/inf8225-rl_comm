@@ -10,8 +10,10 @@
 \BOOKMARK [2][-]{section*.11}{2.1.4 Speedy Q-learning}{section*.7}% 10
 \BOOKMARK [1][-]{section*.12}{2.2 Reward matrix}{chapter*.6}% 11
 \BOOKMARK [0][-]{chapter*.13}{3. Comparing algorithms}{}% 12
-\BOOKMARK [1][-]{section*.14}{3.1 Classic Q-learning}{chapter*.13}% 13
-\BOOKMARK [1][-]{section*.15}{3.2 Speedy Q-learning}{chapter*.13}% 14
-\BOOKMARK [1][-]{section*.16}{3.3 Additional remarks}{chapter*.13}% 15
-\BOOKMARK [0][-]{chapter*.17}{Further work and conclusion}{}% 16
-\BOOKMARK [0][-]{chapter*.18}{Bibliography}{}% 17
+\BOOKMARK [1][-]{section*.14}{3.1 Implementation notes}{chapter*.13}% 13
+\BOOKMARK [1][-]{section*.15}{3.2 Results}{chapter*.13}% 14
+\BOOKMARK [2][-]{section*.16}{3.2.1 Convergence speed}{section*.15}% 15
+\BOOKMARK [2][-]{section*.17}{3.2.2 Real time used}{section*.15}% 16
+\BOOKMARK [1][-]{section*.19}{3.3 Additional remarks}{chapter*.13}% 17
+\BOOKMARK [0][-]{chapter*.20}{Further work and conclusion}{}% 18
+\BOOKMARK [0][-]{chapter*.21}{Bibliography}{}% 19

@@ -11,8 +11,10 @@
 \contentsline {subsection}{2.1.4 Speedy Q-learning}{8}{section*.11}
 \contentsline {section}{2.2 Reward matrix}{9}{section*.12}
 \contentsline {chapter}{3. Comparing algorithms}{10}{chapter*.13}
-\contentsline {section}{3.1 Classic Q-learning}{10}{section*.14}
-\contentsline {section}{3.2 Speedy Q-learning}{10}{section*.15}
-\contentsline {section}{3.3 Additional remarks}{10}{section*.16}
-\contentsline {chapter}{Further work and conclusion}{11}{chapter*.17}
-\contentsline {chapter}{Bibliography}{12}{chapter*.18}
+\contentsline {section}{3.1 Implementation notes}{10}{section*.14}
+\contentsline {section}{3.2 Results}{10}{section*.15}
+\contentsline {subsection}{3.2.1 Convergence speed}{10}{section*.16}
+\contentsline {subsection}{3.2.2 Real time used}{12}{section*.17}
+\contentsline {section}{3.3 Additional remarks}{12}{section*.19}
+\contentsline {chapter}{Further work and conclusion}{13}{chapter*.20}
+\contentsline {chapter}{Bibliography}{14}{chapter*.21}

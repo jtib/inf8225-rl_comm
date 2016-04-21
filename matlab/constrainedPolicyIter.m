@@ -51,38 +51,6 @@ err = 0;
 numStates = size(benefit,1);
 numActions = size(benefit,2);
 
-% iter = 1;
-% lambda = 0.1;
-% delta = 100;
-% p = ones(numStates,1);
-% while iter < 30 & delta > 1e-3
-%     oldp = p;
-%     R = benefit - lambda(iter)*cost;
-%     [p, V, Q, totIter] = policy_iteration(T, R, discount_factor, 0, oldp);
-% 
-% 	% Update lambda
-% 	[newT, newR, stationaryDistr] = calcStationaryDistr(p, T, R, initState);
-% 
-%     %%%%%%%%%%%%%%%%%%%%%%%%
-% %     for s = 1:numStates
-% %         policyCost(s) = cost(s,p(s));
-% %     end
-% %     avgCost2(iter) = sum(policyCost.*stationaryDistr);
-% 	%%%%%%%%%%%%%%%%%%%%%%%%
-%     
-%     policyCost = value_determination(p, T, cost, discount_factor);
-% 	avgCost(iter) = sum(policyCost.*stationaryDistr');
-% 	lambda(iter+1) = max( lambda(iter) + (1/iter^0.7)*(avgCost(iter) - cost_constraint/(1-discount_factor)), 0 );
-%     delta(iter) = abs(lambda(iter+1) - lambda(iter));
-%     
-%     cost_error = avgCost - cost_constraint/(1-discount_factor)
-%     lambda
-%     delta
-% 
-%     iter = iter + 1;
-% end
-% disp('')
-
 discounted_cost_constraint = cost_constraint/(1 - discount_factor);
 
 mid = lo + (hi-lo)/2;       % initial mid value of lamda for bisection search
@@ -100,13 +68,6 @@ while ~done
 
 	% Update lambda
 	[newT, newR, stationaryDistr] = calcStationaryDistr(p, T, R, initState);
-
-    %%%%%%%%%%%%%%%%%%%%%%%%
-%     for s = 1:numStates
-%         policyCost(s) = cost(s,p(s));
-%     end
-%     avgCost2(iter) = sum(policyCost.*stationaryDistr);
-	%%%%%%%%%%%%%%%%%%%%%%%%
     
     policyCost = value_determination(p, T, cost, discount_factor);
 	avgCost(iter) = sum(policyCost.*stationaryDistr'); % discounted average cost
